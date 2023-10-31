@@ -21,7 +21,7 @@ environ.Env.read_env()
 SECRET_KEY = "django-insecure-gly0m+@t@6q0w#zury8m206u(fawe6cfzrtknr_jhxxc(j%@g_"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["my-music-sfte.onrender.com", "localhost", "127.0.0.1", "*"]
 
