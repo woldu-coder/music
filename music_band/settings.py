@@ -21,7 +21,7 @@ environ.Env.read_env()
 SECRET_KEY = "django-insecure-gly0m+@t@6q0w#zury8m206u(fawe6cfzrtknr_jhxxc(j%@g_"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["my-music-sfte.onrender.com", "localhost", "127.0.0.1", "*"]
 
@@ -320,13 +320,14 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = "/images/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 AUTH_USER_MODEL = "music.User"
 # DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
