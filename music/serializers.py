@@ -43,7 +43,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = User
-		fields = ['id' ,'first_name', 'last_name', 'username', 'email', 'phone_number', 'password', 'token']
+		fields = ['id' ,'first_name', 'last_name', 'username', 'email', 'phone_number', 'password', 'token', 'is_staff', 'is_superuser', 'groups', 'user_permissions']
 
 	def create(self, validated_data):
 		user = super().create(validated_data)
